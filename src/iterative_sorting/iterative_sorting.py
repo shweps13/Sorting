@@ -12,13 +12,21 @@ def selection_sort( arr ):
         # TO-DO: swap
         (arr[i], arr[cur_index]) = (arr[cur_index], arr[i])
 
+    print("\nSelection sort")
     print("\n",arr)
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    for i in range(0, (len(arr) - 1)):
+        
+        for j in range(0, (len(arr) - 1)):
+            if arr[j] > arr[(j+1)]:
+                (arr[j], arr[(j+1)]) = (arr[j+1], arr[j])
 
+    print("\nBubble sort")
+    print("\n",arr)
     return arr
 
 
