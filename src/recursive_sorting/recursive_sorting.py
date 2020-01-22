@@ -12,8 +12,18 @@ def merge( arrA, arrB ):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-
-    return arr
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[-1]
+    smaller = []
+    larger = []
+    for i in range(len(arr) - 1):
+        el = arr[i]
+        if el < pivot:
+            smaller.append(el)
+        else:
+            larger.append(el)
+    return merge_sort(smaller) + [pivot] + merge_sort(larger)
 
 
 # STRETCH: implement an in-place merge sort algorithm
