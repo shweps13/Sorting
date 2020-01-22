@@ -3,9 +3,11 @@ def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
     # TO-DO
-    
+    merged_arr = arrA + arrB
+    print(merged_arr)
     return merged_arr
 
+# merge([1,2,3], [4,5,6])
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
